@@ -1,0 +1,55 @@
+button {
+    background-color: rgb(159, 192, 207);
+    border-style: solid;
+    border-color: rgb(159, 192, 207);
+    border-radius: 20%;
+    border-width: 5%;
+    padding: 2%;
+}
+
+button:hover {
+    background-color: white;
+    border-color: rgb(159, 192, 207);
+}
+
+.mode {
+    font-size: 20px;
+    margin-top: 60%;
+}
+
+#current_mode {
+    font-size: 40px;
+}
+
+body {
+    padding-left: 30%;
+    padding-right: 30%;
+    background-color: rgb(202, 202, 202);
+    text-align: center;
+}
+
+#current {
+    font-size: 75px;
+    color: rgb(105, 186, 204);
+    background-color: white;
+    margin: 10%;
+    padding: 20%;
+    display: none;
+    border-radius: 10%;
+}
+
+.option {
+    font-size: 200%;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 5%;
+    display: none;
+}
+
+#menu_bttn {
+    display: none;
+}
+
+#score {
+    display: none;
+}
