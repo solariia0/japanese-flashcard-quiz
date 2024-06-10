@@ -22,10 +22,10 @@ const words_csv = [
     ['word', 'hiragana', 'meaning', 'usage'],
     ['ながら', 'ながら', 'while', '食べながら動画を見る'],
     ['禁忌', 'きんき', 'taboo', 'それは禁忌です'],
-    ['生身', 'なまみ', 'flesh', '俺の生身'],
+    ['生身', 'なまみ', 'flesh', ''],
     ["基盤", "きばん", 'foundation', ''],
     ["個所", "かしょ", 'passage', ''],
-    ['北極', 'ほっきょく', 'north pole', '']
+    ['北極', 'ほっきょく', 'north pole', 'どれほどは北極の寒さ']
 ];
 
 // on clicking normal mode
@@ -95,19 +95,19 @@ function normal_game(word_list, score_val) {
 function check_answer(current_word, selected_option, score_val) {
     if (current_word == selected_option) {
         score_val ++;
-        score_txt.textContent = `Score: ${score_val} (${current_word} ${selected_option})`;
+        score_txt.textContent = `数点: ${score_val} (${current_word} ${selected_option})`;
         reset_stats();
         normal_game(words_csv, score_val);
     }
     else {
-        score_txt.textContent = `Wrong :[ You scored: ${score_val} (${current_word} ${selected_option})!`;
+        score_txt.textContent = `違う :[ 数点: ${score_val} (${current_word} ${selected_option})!`;
         game_to_menu();
     }
 }
 
 function reset_stats(){
     //score_val = 0;
-    score_txt.textContent = `Score: ${score_val}`;
+    score_txt.textContent = `数点: ${score_val}`;
 
     //current_word.textContent = '';
     option_1.textContent = '';
@@ -146,7 +146,7 @@ function getRandomInt(min, max) {
 
   // changes from game to menu screen
   function game_to_menu() {
-    current_mode.textContent = "Pick a mode!";
+    current_mode.textContent = "モードを選択";
 
     // shows mode buttons
     normal_bttn.style.display = "inline";
